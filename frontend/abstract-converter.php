@@ -51,19 +51,23 @@ abstract class Abstract_Converter implements Content_Converter_Interface {
 		return sprintf(
 			'<div class="%s">
 				<div class="header">
-					<img src="%s" id="%s_img" name="%s_img" alt="%s" title="%s" />
+					<a id="%s_link" name="%s_link">
+						<img src="%s" id="%s_img" name="%s_img" alt="%s" title="%s" />
+					</a>
 				</div>
 				<div id="%s_source" name="%s_source">%s</div>
 				<div class="result" id="%s_result" name="%s_result">%s</div>
 			</div>',
 			$slug_, // main CSS-class name
+			$slug_, $slug_, // ID and name of the link
 			sprintf("%simg/%s.png", plugin_dir_url(__FILE__), $slug), // image source file
 			$slug_, $slug_, // image ID and name - for JS
 			$alt, $alt, // Alternative text and Title/hint of the image
 			$slug_, $slug_, // ID and name of the content (source) div (for JS)
 			$content, // content (source)
 			$slug_, $slug_, // ID, and name of the result div (for JS)
-			$this->transform($content)
+			$this->transform($content) // Transformed content - the result of the convertion
+			//, $slug_, $slug_ // ID and name of the link
 		);
 	}
 

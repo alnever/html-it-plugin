@@ -6,4 +6,4 @@ Author: Alex Neverov
 Author URI: http://alneverov.ru
 
 The prototype of the WordPress plugin to convert/download the page content.
-TODO: Save function
+TODO: Decorate result HTML
