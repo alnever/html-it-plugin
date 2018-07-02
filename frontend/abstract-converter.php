@@ -78,7 +78,7 @@ abstract class Abstract_Converter implements Content_Converter_Interface {
 		wp_enqueue_style(
 			sprintf("%s-css", $this->getSlug()),
 			sprintf("%scss/%s.css", plugin_dir_url(__FILE__), $this->getSlug()),
-			null, null, all
+			null, null, 'all'
 		);
 	}
 
