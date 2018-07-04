@@ -6,12 +6,12 @@ The CSS for the HTML converter
 
 }
 
-.html_converter div.header {
+.html_converter div.html_converter_header {
 	width: 100%;
 	padding: 5px 5px 5px 5px;
 }
 
-.html_converter div.header img{
+.html_converter div.html_converter_header img{
 	float: right;
 	width: 20px;
 	height: 20px;
